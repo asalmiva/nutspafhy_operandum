@@ -59,9 +59,9 @@ cnum=args.c
 catchments = [catchments[cnum]] 
 scenarios =[(args.s)] 
 
-forcinglist={'Had':r'/content/PURUVESI_input_data_vmi/Puruvesi_saa2005_2099HadGEM_leap_days.csv',
-             'MPI':r'/content/PURUVESI_input_data_vmi/Puruvesi_saa2005_2099MPI_leap_days.csv',
-             'normi':r'/content/PURUVESI_input_data_vmi/puruvesi_saa_19810101-2020062.csv',}
+forcinglist={'Had':r'/content/PURUVESI_input_data/Puruvesi_saa2005_2099HadGEM_leap_days.csv',
+             'MPI':r'/content/PURUVESI_input_data/Puruvesi_saa2005_2099MPI_leap_days.csv',
+             'normi':r'/content/PURUVESI_input_data/puruvesi_saa_19810101-2020062.csv',}
 
 forcingfile=forcinglist[args.f]
 forci=args.f
