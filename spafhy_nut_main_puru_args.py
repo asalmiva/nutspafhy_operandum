@@ -21,13 +21,13 @@ import seaborn as sns
 import matplotlib.pylab as plt
 import argparse
 import json
-import xarray_extras
-import xarray as xr
+#import xarray_extras
+#import xarray as xr
 from osgeo import gdal, ogr, osr
-import rioxarray
+#import rioxarray
 
 sns.set()
-
+"""
 parser = argparse.ArgumentParser(description='Nutspafhy for defined catchments & scenarios')
 parser.add_argument('--c', type=int,
                    help='catchment to be calculated, use integer')
@@ -46,13 +46,13 @@ parser.add_argument('--end',
 
 
 args=parser.parse_args()
-
+"""
 hydrology_calc = True
 nut_balance_calc = True
 export_calc = True
 clearcut_area = True
 remove_nc = True
-
+"""
 folder =r'/content/PURUVESI_input_data/' 
 catchments =[f for f in sorted(os.listdir(folder)) if f.startswith("04_184")]
 cnum=args.c
@@ -79,7 +79,7 @@ for i in range(len(catchments)):
         if not os.path.exists(folder+catchments[i]+"/"+scenarios[j]):
             os.makedirs(folder+catchments[i]+"/"+scenarios[j])
 
-
+"""
 def nsy(iN, iP, pgen, pcpy, pbu, ptop, pnut, psoil, gisdata, clear_cuts, forcing, outfold = None):
                        
     """run hydrology"""
@@ -215,7 +215,7 @@ def nsy(iN, iP, pgen, pcpy, pbu, ptop, pnut, psoil, gisdata, clear_cuts, forcing
                 
 
 
-
+"""
 #--------- setup general parameters -------------------------------------
 for cat in catchments:  
     for scen in scenarios: 
@@ -345,6 +345,6 @@ for cat in catchments:
                 print("The nutspafhyfile does not exist")
         print ('*******************************') 
         print ('COMPLETED: ', cat  +'  '+ scen)
-         
+"""         
 
 
