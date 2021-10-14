@@ -234,9 +234,9 @@ for cat in catchments:
             enddate=pgen['end_date']
         else:
             pgen['end_date']= enddate
-        pgen['output_folder']=r'/scratch/project_2002470/nutspafhy_puruvesi/output/'+cat+r'/'+ forci + '_' +scen + '_' + startdate + r'/'
+        pgen['output_folder']=r'/content/output/'+cat+r'/'+ forci + '_' +scen + '_' + startdate + r'/'
         outfold=pgen['output_folder']
-        pgen['ncf_file']=r'/scratch/project_2002470/nutspafhy_puruvesi/output/'+cat+r'/'+ forci +'_'+ scen + '_' + startdate + r'/'+'ch.nc'
+        pgen['ncf_file']=r'/content/output/'+cat+r'/'+ forci +'_'+ scen + '_' + startdate + r'/'+'ch.nc'
         psoil = soil_properties()
         pnut = nutpara(pgen, cat, scen)
         gisdata = create_catchment(pgen, fpath=pgen['gis_folder'], plotgrids=False, plotdistr=False)
