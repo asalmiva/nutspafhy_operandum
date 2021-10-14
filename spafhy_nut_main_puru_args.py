@@ -207,7 +207,7 @@ def nsy(iN, iP, pgen, pcpy, pbu, ptop, pnut, psoil, gisdata, clear_cuts, forcing
         if not os.path.exists(pgen['output_folder']+"cc_area/"):
                     os.makedirs(pgen['output_folder']+"cc_area/")
         area_time_of_cc=get_clear_cuts_times(pgen, gisdata['cmask_cc'])
-        area_time_of_cc.to_csv(pgen['output_folder']+"cc_area/"+cat+"_"+scen+"_time_clearcut.csv", sep=',',index=False)
+        area_time_of_cc.to_csv(pgen['output_folder']+"cc_area/time_clearcut.csv", sep=',',index=False)
 
     #**************************************************************************************************************            
 
