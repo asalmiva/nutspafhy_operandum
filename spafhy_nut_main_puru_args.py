@@ -53,19 +53,15 @@ export_calc = True
 clearcut_area = True
 remove_nc = True
 
-folder =r'/scratch/project_2002470/PURUVESI_input_data_vmi/' ###Muista muuttaa nämä 
-catchments =[f for f in sorted(os.listdir(folder)) if f.startswith("04_184")]#tahan voisi myos tehda listan haluituista catchmentesita esim kuonajarvi vehkajarvi
+folder =r'/content/PURUVESI_input_data/' 
+catchments =[f for f in sorted(os.listdir(folder)) if f.startswith("04_184")]
 cnum=args.c
 catchments = [catchments[cnum]] 
-scenarios =[(args.s)] #muutettu
+scenarios =[(args.s)] 
 
-forcinglist={'VKe':r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_keski_20000801-20010731_10v.csv',
-             'VKu':r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_kuiva_20020801-20030731_10v.csv',
-             'VKo':r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_kostea_20110801-20120731_10v.csv',
-             'VLKo':r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_lammin_kostea_20070801-20080731_10v.csv',
-             'Had':r'/scratch/project_2002470/PURUVESI_input_data_vmi/Puruvesi_saa2005_2099HadGEM_leap_days.csv',
-             'MPI':r'/scratch/project_2002470/PURUVESI_input_data_vmi/Puruvesi_saa2005_2099MPI_leap_days.csv',
-             'normi':r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_19810101-2020062.csv',}
+forcinglist={'Had':r'/content/PURUVESI_input_data_vmi/Puruvesi_saa2005_2099HadGEM_leap_days.csv',
+             'MPI':r'/content/PURUVESI_input_data_vmi/Puruvesi_saa2005_2099MPI_leap_days.csv',
+             'normi':r'/content/PURUVESI_input_data_vmi/puruvesi_saa_19810101-2020062.csv',}
 
 forcingfile=forcinglist[args.f]
 forci=args.f
