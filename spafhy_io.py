@@ -252,7 +252,7 @@ def create_catchment(pgen, fpath, plotgrids=False, plotdistr=False):
     sfc, _, _, _, _ = read_AsciiGrid(os.path.join(fpath, bname +'kasvupaikka.asc'))
     sfc = sfc*cmask
     # downslope distance
-    print ('Warning: dsdistance decativated!')
+    #print ('Warning: dsdistance deactivated!')
     #dsdist, _, _, _, _  = read_AsciiGrid(os.path.join(fpath, bname +'downslope_distance.asc'))
     dsdist=None
     
