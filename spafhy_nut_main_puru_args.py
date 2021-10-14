@@ -198,7 +198,7 @@ def nsy(iN, iP, pgen, pcpy, pbu, ptop, pnut, psoil, gisdata, clear_cuts, forcing
      
                     
         print ('')
-        print ('COMPLETED: ', cat  +'  '+ scen)
+        print ('COMPLETED: nutrient export calculation' )
         return dfOut, ex.Nretention, ex.Pretention
         
     #**************************************************************************************************************            
