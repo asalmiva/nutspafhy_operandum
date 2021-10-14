@@ -12,38 +12,14 @@ Created on Mon Jun 25 18:34:12 2018
 #SpaFHy  v. 250618 parameter files for different catchments
 
 def parameters(catchment, scenario):
-    """
-    pgen = {'catchment_id': catchment,
-            'prefix': 'sve',
-            'gis_folder': r'C:/Users/alauren/Documents/SVE_catchments/'+catchment+r'/',
-            'gis_scenarios': r'C:/Users/alauren/Documents/SVE_catchments/'+catchment+r'/' +scenario + r'/',
-            #'forcing_file': r'C:/Users/alauren/Documents/SVE_catchments/'+catchment+r'/SVE_saa.csv',
-            'forcing_file': r'C:/Users/alauren/OneDrive - University of Eastern Finland/codes/nutspafhy_data/2/weather.csv',
-            'output_folder': r'C:/Users/alauren/Documents/WinPython-64bit-2.7.10.3/SVE_out/',
-            'runoff_file': '', #
-            #'soil_file': '../Spathy/Spathy/Spathy_hyde_example/soiltypes.ini',
-            'ncf_file': r'C:/Users/alauren/Documents/WinPython-64bit-2.7.10.3/SVE_out/ch'+ catchment + r'.nc',
-            'start_date': '2012-10-01',
-            'end_date': '2015-11-30',
-            'spinup_end': '2013-12-31',
-            'dt': 86400.0,
-            'spatial_cpy': True,
-            'spatial_soil': True     
-           }
-    """
     pgen = {'catchment_id': None,
             'prefix': 'pur',
-            'gis_folder': r'/scratch/project_2002470/PURUVESI_input_data_vmi/'+catchment+r'/',
-            'gis_scenarios': r'/scratch/project_2002470/PURUVESI_input_data_vmi/'+catchment+r'/' +scenario + r'/',
-            #'forcing_file': r'E:/PURUVESI_input_data_vmi/puruvesi_saa.csv',#############################
-            'forcing_file': r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_keski_20000801-20010731_10v.csv',
-            #'forcing_file': r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_kostea_2012_10v.csv',
-            #'forcing_file': r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_lammin_kostea_2007-2008_10v.csv',
-            #'forcing_file': r'/scratch/project_2002470/PURUVESI_input_data_vmi/puruvesi_saa_kuiva_2002_10v.csv',
-            'output_folder': r'/scratch/project_2002470/nutspafhy_puruvesi/output/'+catchment+r'/'+ scenario +r'/',
+            'gis_folder': r'/content/PURUVESI_input_data/'+catchment+r'/',
+            'gis_scenarios': r'/content/PURUVESI_input_data/'+catchment+r'/' +scenario + r'/',
+            'forcing_file': r'/content/PURUVESI_input_data/puruvesi_saa_19810101-2020062.csv',
+            'output_folder': r'/content/output/'+catchment+r'/'+ scenario +r'/',
             'runoff_file': '', #
-            #'soil_file': '../Spathy/Spathy/Spathy_hyde_example/soiltypes.ini',
-            'ncf_file': r'/scratch/project_2002470/nutspafhy_puruvesi/output/'+catchment+r'/'+ scenario +r'/'+'ch.nc',
+            'ncf_file': r'/content/output/'+catchment+r'/'+ scenario +r'/'+'ch.nc',
             'start_date': '2018-01-01',
             'end_date': '2028-12-31',
             'spinup_end': '2013-12-31',
@@ -217,7 +193,7 @@ def nutpara(pgen, catchment, scenario):
     #print (catchn, type(catchn))
     npara={
         'spafhyfile': pgen['output_folder'] +r'/ch.nc',                           #Spathy output in netCDF-format
-        'mottisims' : r'/scratch/project_2002470/spafhy_puru_vmi/stands.p',                                                  #Motti simulation parameters for growth and yield and biomass
+        'mottisims' : r'/content/nutspafhy_operandum/stands.p',                                                  #Motti simulation parameters for growth and yield and biomass
         'nutspafhyfile': r'/nutspafhy.nc',   #NutSpahy nutrient balance data in netCDF-file
         'ofolder' : pgen['output_folder'] ,                           #outputfolder
         'npr_out' : pgen['output_folder'] + 'nutrient_export_load_'  +  catchment + '_'+scenario+'.csv',
