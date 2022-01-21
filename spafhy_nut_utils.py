@@ -791,8 +791,8 @@ def estimate_imm(gisdata):
     #these parameter values with corrected ground vegetation model 
     iN_peat = 0.652 + 0.282*(conif_vol/vol) - 0.15*bog_p        #R2 0.607
     iN_miner = 0.894 + 0.284*poor_min                           #R2 0.301
-    iP_peat = 0.757                                             #average over the data
-    iP_miner = 0.807                                            #average over the data
+    iP_peat = 0.888                                             #average over the data
+    iP_miner = 0.905                                            #average over the data
     
     #iN_peat = 0.559 - 0.241*bog_p + 0.400*(conif_vol/vol) + 0.024*vol/100.  #R2 0.91
     #iN_miner = 0.671 - 0.199*bog_p + 0.307*(conif_vol/vol)+ 0.017*vol/100.   #R2 0.88
