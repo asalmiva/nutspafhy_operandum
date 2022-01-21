@@ -31,6 +31,9 @@ sns.set()
 parser = argparse.ArgumentParser(description='Nutspafhy for defined catchments & scenarios')
 parser.add_argument('--c', type=int,
                    help='catchment to be calculated, use integer')
+parser.add_argument('--cat',
+                   help='catchment code', type=str)
+
 parser.add_argument('--s',
                    help='logging scenario to be calculated', type=str)
 parser.add_argument('--f',
@@ -55,8 +58,11 @@ remove_nc = True
 """
 folder =r'/content/PURUVESI_input_data/' 
 catchments =[f for f in sorted(os.listdir(folder)) if f.startswith("04_184")]
-cnum=args.c
-catchments = [catchments[cnum]] 
+if args.cat:
+    catchments = [args.cat] 
+else:
+    cnum=args.c
+    catchments = [catchments[cnum]] 
 scenarios =[(args.s)] 
 
 forcinglist={'Had':r'/content/PURUVESI_input_data/Puruvesi_saa2005_2099HadGEM_leap_days.csv',
