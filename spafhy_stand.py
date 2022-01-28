@@ -224,8 +224,8 @@ def understory_uptake(lat, lon, ts, gisdata, expected_yield, simtime):
         lit_share = {'description': 'share of living biomass that is lost as litter annually for dwarf shrubs (ds), herbs & grasses (h), upland mosses (um), and sphagna (s), unit: kg kg-1',
                    'ds': 0.2, 'h': 0.5, 'um': 0.3, 's': 0.3}
         retrans ={'description': 'share of nutrients retranslocated before litterfallfor dwarf shrubs (ds), herbs & grasses (h), upland mosses (um), and sphagna (s), unit: kg kg-1',
-                  'ds': {'N':0.5, 'P':0.5},'h': {'N':0.5, 'P':0.5}, 
-                  'um': {'N':0.0, 'P':0.0},'s': {'N':0.0, 'P':0.7}}
+                  'ds': {'N':0.5, 'P':0.73},'h': {'N':0.5, 'P':0.73}, #0.5 ennen P
+                  'um': {'N':0.0, 'P':0.0},'s': {'N':0.0, 'P':0.73}}
         fl_to_total_turnover = 1.2   # converts the turnover of above-ground bionmass to total including root turnover
         fl_above_to_total = 1.7   # converts aboveground biomass to total biomass 
         
@@ -464,7 +464,7 @@ def understory_uptake(lat, lon, ts, gisdata, expected_yield, simtime):
             print ('NEGATIVE UPTAKE')
             print (np.nanmin(n_gv))
             import sys; sys.exit()
-        return n_gv, p_gv, nup_litter, pup_litter, gv_bot ##oli gv_bot
+        return n_gv, p_gv, nup_litter, pup_litter, gv_tot ##oli gv_bot
 
     dem = gisdata['dem'].copy()  # x2 surface elevation m asl
     sfc = np.where(gisdata['sfc']>5, 5, gisdata['sfc'])
