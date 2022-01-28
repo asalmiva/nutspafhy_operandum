@@ -225,7 +225,7 @@ def understory_uptake(lat, lon, ts, gisdata, expected_yield, simtime):
                    'ds': 0.2, 'h': 0.5, 'um': 0.3, 's': 0.3}
         retrans ={'description': 'share of nutrients retranslocated before litterfallfor dwarf shrubs (ds), herbs & grasses (h), upland mosses (um), and sphagna (s), unit: kg kg-1',
                   'ds': {'N':0.5, 'P':0.5},'h': {'N':0.5, 'P':0.5}, 
-                  'um': {'N':0.0, 'P':0.0},'s': {'N':0.0, 'P':0.7}}
+                  'um': {'N':0.0, 'P':0.0},'s': {'N':0.0, 'P':0.0}}
         fl_to_total_turnover = 1.2   # converts the turnover of above-ground bionmass to total including root turnover
         fl_above_to_total = 1.7   # converts aboveground biomass to total biomass 
         
