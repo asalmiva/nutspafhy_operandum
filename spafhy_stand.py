@@ -492,7 +492,7 @@ def understory_uptake(lat, lon, ts, gisdata, expected_yield, simtime):
     nup = nup_net + nup_litter_mean*simtime         # total N uptake kg ha-1 simulation time (in yrs) -1
     pup = pup_net + pup_litter_mean*simtime         # total P uptake kg ha-1 simulation time (in yrs) -1
     
-    popt = False
+    popt = True
     if popt:
         import matplotlib.pylab as plt
         fig = plt.figure(num='nutvege')
