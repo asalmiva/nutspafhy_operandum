@@ -495,7 +495,7 @@ def understory_uptake(lat, lon, ts, gisdata, expected_yield, simtime):
     popt = True
     if popt:
         import matplotlib.pylab as plt
-        fig = plt.figure(num='nutvege')
+        fig = plt.figure(num='nutvege',figsize=(20,20))
         plt.subplot(331); plt.imshow(n_gv); plt.colorbar()
         plt.subplot(332); plt.imshow(nup_net); plt.colorbar()
         plt.subplot(333); plt.imshow(nup_litter_mean); plt.colorbar()
