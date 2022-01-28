@@ -464,7 +464,7 @@ def understory_uptake(lat, lon, ts, gisdata, expected_yield, simtime):
             print ('NEGATIVE UPTAKE')
             print (np.nanmin(n_gv))
             import sys; sys.exit()
-        return n_gv, p_gv, nup_litter, pup_litter, gv_bot
+        return n_gv, p_gv, nup_litter, pup_litter, gv_tot ##oli gv_bot
 
     dem = gisdata['dem'].copy()  # x2 surface elevation m asl
     sfc = np.where(gisdata['sfc']>5, 5, gisdata['sfc'])
